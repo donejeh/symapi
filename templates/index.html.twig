@@ -1,5 +1,18 @@
-<div>
+{% extends 'base.html.twig' %}
 
-example of twig
+{% block title %}
+    Movies website
+{% endblock %}
 
-</div>
+{% block body %}
+    {{ title }}
+
+
+    {% for movie in movies %}
+    
+    <p>{{ movie}}</p>
+{% endfor %}
+
+
+{% endblock %}
+

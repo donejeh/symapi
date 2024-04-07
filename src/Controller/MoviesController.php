@@ -13,7 +13,9 @@ class MoviesController extends AbstractController
     #[Route('/movies', name: 'app_movies')]
     public function index(Request $request, $name): JsonResponse
     {
-        return $this->render();
+        return $this->render('index.html.twig',[
+            'title' => 'Avengers: Endgame'
+        ]);
     }
 
 }

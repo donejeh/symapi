@@ -17,8 +17,21 @@ class StockTest extends KernelTestCase{
 
     }
 
-    public function testItworks(){
+    /** @test **/
+    public function a_stock_record_can_be_created_in_the_database(){
+        //setup
 
-        $this->assertTrue(true);
+        // stock
+
+        $stock = new Stock();
+        $stock->setSymbol('AMZ');
+        $stock->setShortName('Amazon Inc');
+        $stock->setCurrency('USD');
+        $stock->setExchangeName('Nasdaq');
+        $stock->setRegion('US');
+        $price = 1000;
+        $previousClose = 1000
+
+
     }
 }

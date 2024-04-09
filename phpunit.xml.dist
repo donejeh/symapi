@@ -15,6 +15,7 @@
         <server name="SHELL_VERBOSITY" value="-1" />
         <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
         <server name="SYMFONY_PHPUNIT_VERSION" value="9.6" />
+        <!-- <server name="SYMFONY_DEPERCATIONS_HELPER" value="disable" /> -->
     </php>
 
     <testsuites>
@@ -28,11 +29,11 @@
             <directory suffix=".php">src</directory>
         </include>
     </coverage>
+      <extensions>
+        <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension"/>
+    </extensions>
 
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
     </listeners>
-
-    <extensions>
-    </extensions>
 </phpunit>
